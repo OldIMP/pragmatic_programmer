@@ -1,3 +1,4 @@
+# pylint: disable=missing-docstring
 import turtle
 from unittest.mock import call, patch
 
