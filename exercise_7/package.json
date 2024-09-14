@@ -1,0 +1,17 @@
+{
+  "name": "pp_time_peg",
+  "version": "1.0.0",
+  "main": "time.js",
+  "scripts": {
+    "build": "npx pegjs time.pegjs",
+    "test": "npm run build && npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OldIMP/pragmatic_programmer.git"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "pegjs": "^0.10.0"
+  }
+}
