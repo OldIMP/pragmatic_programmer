@@ -1,6 +1,6 @@
-start = h:integer ':'? m:integer? isP:ampm? {
+start = h:digits ':'? m:digits? isP:ampm? {
   let hour = isP ? 12+h : h
   return 60*hour + m
 }
-integer = d:[0-9]+ {return parseInt(d.join(''))}
+digits = d:$[0-9]|1..2| {return parseInt(d)}
 ampm = ap:('a'/'p') 'm' {return 'p'===ap}
