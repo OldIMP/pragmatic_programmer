@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "time.js",
   "scripts": {
-    "build": "npx pegjs time.pegjs",
+    "build": "npx peggy time.peggy",
     "test": "npm run build && npx jest"
   },
   "repository": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/OldIMP/pragmatic_programmer.git"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "pegjs": "^0.10.0"
+    "peggy": "^4.0.3",
+    "jest": "^29.7.0"
   }
 }
