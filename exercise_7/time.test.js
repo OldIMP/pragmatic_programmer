@@ -11,3 +11,9 @@ testTime('7:38pm', 19, 38);
 testTime('23:42', 23, 42);
 testTime('3:16', 3, 16);
 testTime('3:16am', 3, 16);
+
+testTime('1am', 1);
+testTime('1pm', 13);
+testTime('2:30', 2, 30);
+testTime('14:30', 14, 30);
+testTime('2:30pm', 14, 30);
