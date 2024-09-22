@@ -15,8 +15,8 @@ describe("time.js can parse", () =>
         ['14:30', 14, 30],
         ['2:30pm', 14, 30],
     ])
-    ("when parsing '%s'", (input, expectedHour, extractedMin = 0) =>
-        expect(parser.parse(input)).toEqual(expectedHour * 60 + extractedMin)));
+    ("when parsing '%s'", (input, expectedHour, expectedMin = 0) =>
+        expect(parser.parse(input)).toEqual(expectedHour * 60 + expectedMin)));
 
 describe("time.js can't parse", () =>
     it.each(['1', ':30pm', '13:24pm', '1:60', '13pm', '01:60am'])
