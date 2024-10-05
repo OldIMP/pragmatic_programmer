@@ -1,3 +1,7 @@
+/**
+ * Exercise 7: Implement the time parser using Peggy.
+ */
+
 start = h:digits m:min? ap:ampm?
         &{
           let isTime = m||ap

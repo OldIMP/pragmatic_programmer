@@ -6,5 +6,5 @@
   [![Python application](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/python-app.yml/badge.svg)](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/python-app.yml)
   [![Pylint](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/pylint.yml/badge.svg)](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/pylint.yml)
 
-## [Exercise 6-7](./exercise_7): Peggy
+## [Exercise 6-8](./exercise_7_8): Peggy / Regular Expression
   [![Node.js CI](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/node.js.yml/badge.svg)](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/node.js.yml)

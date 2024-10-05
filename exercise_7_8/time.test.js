@@ -1,6 +1,5 @@
-let parser = require('./time.js');
-
-describe("time.js", () => {
+describe.each([['Peggy parser', require('./time.js')], ['Regex Parser', require('./time.regex.js')]])
+("%s", (name, parser) => {
     it.each([
         // from Exercise 7
         ['4pm', 16],

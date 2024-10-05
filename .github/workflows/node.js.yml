@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: exercise_7
+        working-directory: exercise_7_8
 
     strategy:
       matrix:
