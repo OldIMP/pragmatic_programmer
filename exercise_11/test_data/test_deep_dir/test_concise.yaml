@@ -1,0 +1,12 @@
+# Concise YAML example
+name: John Doe
+age: 30
+isStudent: false
+courses:
+  - name: History
+    credits: 3
+  - name: Math
+    credits: 4
+address:
+  city: "New York"
+  zip: "10001"

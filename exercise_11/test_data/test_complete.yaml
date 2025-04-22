@@ -1,0 +1,81 @@
+# This is a comment
+# Simple key-value pairs
+string_key: "A string value"
+integer_key: 123
+float_key: 45.67
+boolean_key: true
+null_key: null
+
+# A list of scalars
+colors:
+  - apple
+  - banana
+  - orange
+
+# A list of mappings
+people:
+  - name: John Doe
+    age: 30
+    city: New York
+  - name: Jane Doe
+    age: 25
+    city: London
+
+# Nested structures
+person:
+  name: &person_name "Peter Pan"
+  age: 12
+  address:
+    street: "123 Neverland"
+    city: "Fantasy"
+  hobbies:
+    - flying
+    - fighting pirates
+
+# Using an alias
+captain:
+  name: *person_name # This will be "Peter Pan"
+
+# Multiline strings
+literal_style: |
+  This is a literal block.
+  Line breaks are preserved.
+  Newlines at the end are also preserved.
+
+
+folded_style: >
+  This is a folded block.
+  Line breaks are converted to spaces.
+  But an empty line creates a new paragraph.
+
+  Like this.
+
+# Tags
+explicit_string: !!str 123
+explicit_int: !!int "456"
+
+# More complex structures
+invoice: 34843
+date   : 2001-01-23
+bill-to: &id001
+    given  : Chris
+    family : Dumars
+    address:
+        lines: |
+            458 Walkman Dr.
+            Suite #292
+        city    : Royal Oak
+        state   : MI
+        postal  : 48046
+ship-to: *id001
+product:
+    - sku         : BL394D
+      quantity    : 4
+      description : Basketball
+      price       : 450.00
+    - sku         : BL4438H
+      quantity    : 1
+      description : Super Hoop
+      price       : 2392.00
+tax  : 251.42
+total: 4443.52
