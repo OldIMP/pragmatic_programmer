@@ -6,7 +6,7 @@ from pathlib import Path
 
 import yaml
 
-from exercise_11_yml_2_json import ENCODING, yaml_2_csv
+from exercise_11_yml_2_json import ENCODING, yaml_2_csv  # isort: skip
 
 
 def test(request, tmp_path):
