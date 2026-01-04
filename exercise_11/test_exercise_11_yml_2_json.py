@@ -6,13 +6,13 @@ from pathlib import Path
 
 import yaml
 
-from exercise_11_yml_2_json import ENCODING, main
+from exercise_11_yml_2_json import ENCODING, yaml_2_csv
 
 
 def test(request, tmp_path):
     shutil.copytree(request.path.parent / "test_data", tmp_path, dirs_exist_ok=True)
 
-    main(tmp_path)
+    yaml_2_csv(tmp_path)
 
     jsons_yamls = (sorted(Path(tmp_path).rglob(f"*.{t}")) for t in ("json", "yaml"))
     for j, y in zip(*jsons_yamls, strict=True):
