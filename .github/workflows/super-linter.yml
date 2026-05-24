@@ -14,18 +14,26 @@ on:
 jobs:
   run-lint:
     runs-on: ubuntu-latest
+
+    permissions:
+      # issues and pull-requests permissions to write results as pull
+      # request comments. Omit them if you don't need summary comments
+      issues: write
+      pull-requests: write
+      # To report GitHub Actions status checks. Omit if you don't need
+      # to update commit status
+      statuses: write
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: Lint Code Base
-        uses: github/super-linter@v4
+      - name: Super-Linter
+        uses: super-linter/super-linter@v8
         env:
-          # no config? prefer-const & other BS!
-          VALIDATE_JAVASCRIPT_STANDARD: false
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: "master"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
