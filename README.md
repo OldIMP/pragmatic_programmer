@@ -4,7 +4,6 @@
 
 ## In Python
   [![Python application](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/python-app.yml/badge.svg)](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/python-app.yml)
-  [![Pylint](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/pylint.yml/badge.svg)](https://github.com/OldIMP/pragmatic_programmer/actions/workflows/pylint.yml)
 
 ### [Exercise 4](./exercise_4): turtle
 
