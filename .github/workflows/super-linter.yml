@@ -35,6 +35,7 @@ jobs:
         uses: super-linter/super-linter@v8
         env:
           VALIDATE_ALL_CODEBASE: false
-          # Conflict w/ Biome
+          # Conflict w/ Biome / IDE
           VALIDATE_JAVASCRIPT_PRETTIER: false
+          VALIDATE_YAML_PRETTIER: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
