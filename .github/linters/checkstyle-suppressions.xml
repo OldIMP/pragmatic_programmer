@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Test data contains intentionally snake_case names -->
+    <suppress checks=".+Name" files="exercise_12[/\\]test_data[/\\]expected[/\\]java[/\\].+\.java"/>
+</suppressions>

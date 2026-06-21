@@ -33,4 +33,5 @@ jobs:
           # Conflict w/ Biome / IDE
           VALIDATE_JAVASCRIPT_PRETTIER: false
           VALIDATE_YAML_PRETTIER: false
+          JAVA_JVM_COMMAND_ARGS: -Dorg.checkstyle.sun.suppressionfilter.config=.github/linters/checkstyle-suppressions.xml
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
