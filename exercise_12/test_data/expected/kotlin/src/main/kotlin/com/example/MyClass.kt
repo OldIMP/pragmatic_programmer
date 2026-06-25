@@ -1,10 +1,9 @@
 package com.example
 
-class MyClass(private var my_string: String) {
-
-    fun get_my_string(): String {
-        return my_string
-    }
+class MyClass(
+    private var my_string: String,
+) {
+    fun get_my_string(): String = my_string
 
     fun set_my_string(my_string: String) {
         this.my_string = my_string
