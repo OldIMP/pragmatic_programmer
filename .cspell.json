@@ -1,0 +1,21 @@
+{
+  "words": ["ampm", "jsons", "shellcheck", "yamls", "zizmor"],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "package-lock.json",
+    "megalinter-reports",
+    ".megalinter.yml"
+  ],
+  "dictionaries": [
+    "en_US",
+    "en-gb",
+    "softwareTerms",
+    "typescript",
+    "node",
+    "python",
+    "json"
+  ],
+  "language": "en",
+  "version": "0.2"
+}
