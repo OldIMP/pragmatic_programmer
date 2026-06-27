@@ -1,0 +1,14 @@
+# MegaLinter configuration file
+# See https://megalinter.io/latest/configuration/
+
+# Disable formatters that conflict with Biome
+DISABLE_FORMATTERS:
+  - prettier
+#TODO - yamlfmt
+
+#TODO PYTHON_ISORT_ARGUMENTS: "--profile black"
+
+GITHUB_STATUS_REPORTER: true
+
+# Does nothing but reminds you to use the version that you're using...
+SECURITY_SUGGESTIONS: false
