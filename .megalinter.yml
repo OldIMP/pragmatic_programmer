@@ -1,10 +1,7 @@
 # MegaLinter configuration file
 # See https://megalinter.io/latest/configuration/
 
-# Disable formatters that conflict with Biome
-DISABLE_FORMATTERS:
-  - prettier
-#TODO - yamlfmt
+KOTLIN_KTLINT_ARGUMENTS: --baseline=.github/linters/ktlint-baseline.xml
 
 #TODO PYTHON_ISORT_ARGUMENTS: "--profile black"
 
