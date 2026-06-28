@@ -1,4 +1,5 @@
-""" Exercise 4 - Turtle"""
+"""Exercise 4 - Turtle"""
+
 import abc
 import argparse
 import ast
@@ -54,13 +55,13 @@ class PenUp(Command):
 
 
 COMMANDS = {
-    'N': Movement(90),
-    'S': Movement(270),
-    'W': Movement(180),
-    'E': Movement(0),
-    'P': Pen(),
-    'D': PenDown(),
-    'U': PenUp(),
+    "N": Movement(90),
+    "S": Movement(270),
+    "W": Movement(180),
+    "E": Movement(0),
+    "P": Pen(),
+    "D": PenDown(),
+    "U": PenUp(),
 }
 
 
@@ -70,8 +71,8 @@ def translate_command(abbreviation):
 
 
 PARSER = argparse.ArgumentParser()
-PARSER.add_argument('command', type=translate_command)
-PARSER.add_argument('param', nargs='?')
+PARSER.add_argument("command", type=translate_command)
+PARSER.add_argument("param", nargs="?")
 
 
 def parse_command(command):
@@ -83,12 +84,12 @@ def main():
     # pylint: disable=missing-function-docstring
     t = turtle.Turtle()
     while True:
-        command = t.screen.textinput('Next turtle move', 'e.g. S 100')
-        if 0 == len(command):
+        command = t.screen.textinput("Next turtle move", "e.g. S 100")
+        if not command:
             break
         args = parse_command(command)
         args.command.execute(t, args.param)
 
 
-if '__main__' == __name__:
+if "__main__" == __name__:
     main()
