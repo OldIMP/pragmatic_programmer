@@ -1,6 +1,7 @@
 # MegaLinter configuration file
 # See https://megalinter.io/latest/configuration/
 
+KOTLIN_DETEKT_ARGUMENTS: --build-upon-default-config --config .github/linters/detekt-config.yml
 KOTLIN_KTLINT_ARGUMENTS: --baseline=.github/linters/ktlint-baseline.xml
 
 #TODO PYTHON_ISORT_ARGUMENTS: "--profile black"

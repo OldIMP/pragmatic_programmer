@@ -1,5 +1,13 @@
 {
-  "words": ["ampm", "jsons", "shellcheck", "yamls", "zizmor", "ktlint"],
+  "words": [
+    "ampm",
+    "jsons",
+    "shellcheck",
+    "yamls",
+    "zizmor",
+    "ktlint",
+    "detekt"
+  ],
   "ignorePaths": [
     "**/node_modules/**",
     "**/.git/**",

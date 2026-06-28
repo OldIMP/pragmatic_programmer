@@ -1,0 +1,20 @@
+naming:
+  ConstructorParameterNaming:
+    excludes:
+      # Intentional snake_cases since that's the whole purpose
+        'exercise_12/test_data/expected/kotlin/**/*.kt' &intentional_snake_case
+  FunctionNaming:
+    excludes:
+      - '**/test/**'
+      - '**/androidTest/**'
+      - '**/commonTest/**'
+      - '**/jvmTest/**'
+      - '**/androidUnitTest/**'
+      - '**/androidInstrumentedTest/**'
+      - '**/jsTest/**'
+      - '**/iosTest/**'
+      - *intentional_snake_case
+  FunctionParameterNaming:
+    excludes: *intentional_snake_case
+  VariableNaming:
+    excludes: *intentional_snake_case
