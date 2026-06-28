@@ -11,8 +11,11 @@
     "url": "https://github.com/OldIMP/pragmatic_programmer.git"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.15",
-    "jest": "^30.2.0",
-    "peggy": "^5.0.5"
+    "@biomejs/biome": "2.5.1",
+    "jest": "^30.4.2",
+    "peggy": "^5.1.0"
+  },
+  "overrides": {
+    "js-yaml": "^5.2.0"
   }
 }
