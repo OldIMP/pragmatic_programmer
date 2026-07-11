@@ -10,3 +10,7 @@ GITHUB_STATUS_REPORTER: true
 
 # Does nothing but reminds you to use the version that you're using...
 SECURITY_SUGGESTIONS: false
+
+DISABLE_LINTERS:
+  # Pylint already included in .github/workflows/python-app.yml
+  - PYTHON_PYLINT
