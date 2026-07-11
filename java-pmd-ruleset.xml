@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- base on https://github.com/oxsecurity/megalinter/blob/main/TEMPLATES/java-pmd-ruleset.xml -->
-<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         name="Default ruleset used by the CodeClimate Engine for Salesforce.com Java"
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="Custom ruleset for MegaLinter"
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
 
-    <description>Default RuleSet for MegaLinter</description>
-
-    <!-- IGNORE FILES -->
-    <exclude-pattern>.*/java-domainbuilder/*.*</exclude-pattern>
-    <exclude-pattern>.*/app-setup/*.*</exclude-pattern>
-    <exclude-pattern>.*/fflib_*.*</exclude-pattern>
-    <exclude-pattern>.*/json2java/*.*</exclude-pattern>
+    <description>Custom RuleSet for MegaLinter</description>
 
     <!-- STANDARD RULES -->
     <rule ref="category/java/design.xml">
