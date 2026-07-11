@@ -38,7 +38,7 @@ public final class MyClass {
    * @param args unused command-line arguments
    */
   public static void main(final String[] args) {
-    MyClass myClassInstance = new MyClass("helloWorld");
+    final MyClass myClassInstance = new MyClass("helloWorld");
     System.out.println(myClassInstance.getMyString());
   }
 }

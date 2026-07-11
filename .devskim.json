@@ -1,0 +1,6 @@
+{
+  "Globs": ["**/.git/**", "**/megalinter-reports/**"],
+  "LanguageRuleIgnoreMap": {
+    "java-pmd-ruleset.xml": ["DS137138"]
+  }
+}
