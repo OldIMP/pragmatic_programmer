@@ -6,7 +6,8 @@
     "yamls",
     "zizmor",
     "ktlint",
-    "detekt"
+    "detekt",
+    "devskim"
   ],
   "ignorePaths": [
     "**/node_modules/**",
