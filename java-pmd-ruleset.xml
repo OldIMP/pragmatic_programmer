@@ -15,10 +15,16 @@
         <exclude name="CyclomaticComplexity"/>
     </rule>
     <rule ref="category/java/codestyle.xml"/>
+
+    <!-- Test data contains intentionally snake_case names -->
     <rule ref="category/java/codestyle.xml/FieldNamingConventions">
         <properties>
-            <!-- Test data contains intentionally snake_case names -->
             <property name="violationSuppressRegex" value=".*(my_|_value).*"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/FormalParameterNamingConventions">
+        <properties>
+            <property name="violationSuppressRegex" value=".+_value.*"/>
         </properties>
     </rule>
 </ruleset>
