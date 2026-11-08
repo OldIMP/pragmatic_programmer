@@ -14,3 +14,5 @@ SECURITY_SUGGESTIONS: false
 DISABLE_LINTERS:
   # Pylint already included in .github/workflows/python-app.yml
   - PYTHON_PYLINT
+  # Conflict w/ Biome
+  - JAVASCRIPT_STANDARD
