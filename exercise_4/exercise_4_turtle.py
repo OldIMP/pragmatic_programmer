@@ -11,20 +11,22 @@ class Command(abc.ABC):
     """Interface for all turtle commands"""
 
     @abc.abstractmethod
-    def execute(self, t: turtle.Turtle, param=None):
+    def execute(self, t: turtle.Turtle, param: str | None = None):
         """Executes this command w/ the supplied `param`"""
         raise NotImplementedError
 
 
 class Movement(Command):
     # pylint: disable=too-few-public-methods
-    """Moves the turtle in the direction specified by :attr:`heading`"""
+    """Moves the turtle in the direction specified by :attr:`self.heading`"""
 
     def __init__(self, heading):
         self.heading = heading
 
-    def execute(self, t: turtle.Turtle, param=None):
+    def execute(self, t: turtle.Turtle, param: str | None = None):
         t.setheading(self.heading)
+        if param is None:
+            PARSER.error("Movement commands require one parameter")
         t.forward(int(param))
 
 
@@ -32,7 +34,9 @@ class Pen(Command):
     # pylint: disable=too-few-public-methods
     """Sets pen attributes as in :func:`~turtle.pen`"""
 
-    def execute(self, t: turtle.Turtle, param=None):
+    def execute(self, t: turtle.Turtle, param: str | None = None):
+        if param is None:
+            PARSER.error("Pen commands require one parameter")
         t.pen(ast.literal_eval(param))
 
 
@@ -40,8 +44,7 @@ class PenDown(Command):
     # pylint: disable=too-few-public-methods
     """Puts pen down"""
 
-    # noinspection PyMethodMayBeStatic
-    def execute(self, t: turtle.Turtle, _=None):
+    def execute(self, t: turtle.Turtle, param: str | None = None):
         t.pendown()
 
 
@@ -49,8 +52,7 @@ class PenUp(Command):
     # pylint: disable=too-few-public-methods
     """Raises pen up"""
 
-    # noinspection PyMethodMayBeStatic
-    def execute(self, t: turtle.Turtle, _=None):
+    def execute(self, t: turtle.Turtle, param: str | None = None):
         t.penup()
 
 
