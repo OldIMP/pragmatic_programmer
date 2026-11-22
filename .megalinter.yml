@@ -1,0 +1,21 @@
+# MegaLinter configuration file
+# See https://megalinter.io/latest/configuration/
+
+KOTLIN_DETEKT_ARGUMENTS: --build-upon-default-config
+KOTLIN_KTLINT_ARGUMENTS: --baseline=.github/linters/ktlint-baseline.xml
+
+GITHUB_STATUS_REPORTER: true
+
+# Does nothing but reminds you to use the version that you're using...
+SECURITY_SUGGESTIONS: false
+
+DISABLE_LINTERS:
+  # Pylint already included in .github/workflows/python-app.yml
+  - PYTHON_PYLINT
+  # Conflict w/ Biome
+  - JAVASCRIPT_STANDARD
+  - TYPESCRIPT_STANDARD
+
+ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
+  - GITHUB_TOKEN
+ACTION_ZIZMOR_CONFIG_FILE: .github/linters/zizmor.yaml

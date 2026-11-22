@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- base on https://github.com/oxsecurity/megalinter/blob/main/TEMPLATES/java-pmd-ruleset.xml -->
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="Custom ruleset for MegaLinter"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>Custom RuleSet for MegaLinter</description>
+
+    <!-- STANDARD RULES -->
+    <rule ref="category/java/design.xml">
+        <exclude name="ExcessiveParameterList"/>
+        <exclude name="ExcessivePublicCount"/>
+        <exclude name="TooManyFields"/>
+        <exclude name="CyclomaticComplexity"/>
+    </rule>
+    <rule ref="category/java/codestyle.xml"/>
+
+    <!-- Test data contains intentionally snake_case names -->
+    <rule ref="category/java/codestyle.xml/FieldNamingConventions">
+        <properties>
+            <property name="violationSuppressRegex" value=".*(my_|_value).*"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/FormalParameterNamingConventions">
+        <properties>
+            <property name="violationSuppressRegex" value=".+_value.*"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/MethodNamingConventions">
+        <properties>
+            <property name="violationSuppressRegex" value=".+_my_string.*"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/LocalVariableNamingConventions">
+        <properties>
+            <property name="violationSuppressRegex" value=".*my_class_instance.*"/>
+        </properties>
+    </rule>
+</ruleset>

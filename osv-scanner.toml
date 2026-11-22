@@ -1,0 +1,6 @@
+[[PackageOverrides]]
+name = "pygments"
+ecosystem = "PyPI"
+vulnerability.ignore = true
+version = "2.9.0"
+reason = "pytest 9.1.1+ requires pygements 2.20.0+. osv-scanner wrongly reports 2.9.0"

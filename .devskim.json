@@ -1,0 +1,6 @@
+{
+  "Globs": ["**/.git/**", "**/megalinter-reports/**"],
+  "LanguageRuleIgnoreMap": {
+    "xml": ["DS137138"]
+  }
+}

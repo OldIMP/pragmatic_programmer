@@ -4,7 +4,8 @@
   "ignore": [
     "**/__snapshots__/**",
     "**/node_modules/**",
-    "**/package-lock.json"
+    "**/package-lock.json",
+    "exercise_12/test_data/**"
   ],
   "absolute": true
 }
