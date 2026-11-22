@@ -4,8 +4,6 @@
 KOTLIN_DETEKT_ARGUMENTS: --build-upon-default-config
 KOTLIN_KTLINT_ARGUMENTS: --baseline=.github/linters/ktlint-baseline.xml
 
-# TODO PYTHON_ISORT_ARGUMENTS: "--profile black"
-
 GITHUB_STATUS_REPORTER: true
 
 # Does nothing but reminds you to use the version that you're using...
@@ -17,3 +15,6 @@ DISABLE_LINTERS:
   # Conflict w/ Biome
   - JAVASCRIPT_STANDARD
   - TYPESCRIPT_STANDARD
+
+ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
+  - GITHUB_TOKEN
